@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>Week 6 assessment</title>
+    <script src="./vendors/angular.min.js" charset="utf-8"></script>
+    <script src="./scripts/script.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="controller">
+    <form class="petForm" action="/pets" method="post" >
+      <p><input type="text" id="aliasIn" name="name" value="" ng-model="aliasIn" placeholder="Enter hero name"></p>
+      <p><input type="text" id="firstNameIn" name="name" value="" ng-model="firstNameIn" placeholder="Real first name"></p>
+      <p><input type="text" id="lastNameIn" name="name" value="" ng-model="lastNameIn" placeholder="Real last name"></p>
+      <p><input type="text" id="cityIn" name="name" value="" ng-model="cityIn" placeholder="Location"></p>
+      <p><input type="text" id="powerNameIn" name="name" value="" ng-model="powerNameIn" placeholder="Superpower"></p>
+      <p><select id="powerNameIn" ng-model="powerNameIn" name="">
+        
+      </select></p>
+
+      <p><button type="button" name="button" ng-click="getUserInput()" id="submitButton" class="tab">SUBMIT</button></p>
+      <!-- <button type="button" name="button" ng-click="getPets()" id="getButton">GET</button> -->
+
+    </form>
+
+    <div class="outputDiv" ng-repeat="record in allHeroes">
+
+      <p>Alias: {{record.alias }}</p>
+      <p>First Name: {{record.first_name }}</p>
+      <p>Last Name: {{record.last_name}}</p>
+      <p>City: {{record.city }}</p>
+      <p>Power: {{record.power_name }}</p>
+
+    </div>
+  </body>
+</html>
