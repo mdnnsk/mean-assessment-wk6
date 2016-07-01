@@ -1,0 +1,22 @@
+<form class="heroForm" action="/heroes" method="post" >
+  <p><input type="text" id="aliasIn" name="name" value="" ng-model="aliasIn" placeholder="Enter hero name"></p>
+  <p><input type="text" id="firstNameIn" name="name" value="" ng-model="firstNameIn" placeholder="Real first name"></p>
+  <p><input type="text" id="lastNameIn" name="name" value="" ng-model="lastNameIn" placeholder="Real last name"></p>
+  <p><input type="text" id="cityIn" name="name" value="" ng-model="cityIn" placeholder="Location"></p>
+  <!-- <p><input type="text" id="powerNameIn" name="name" value="" ng-model="powerNameIn" placeholder="Superpower"></p> -->
+  <p><select id="powerNameIn" ng-model="powerNameIn" name="">
+    <option value="" disabled selected>Select Puper Power</option>
+    <option value="Invisibility">Invisibility</option>
+    <option value="Flight">Flight</option>
+    <option value="Super Speed">Super Speed</option>
+    <option value="Heat Vision">Heat Vision</option>
+    <option value="Super Strength">Super Strength</option>
+    <option value="Accelerated Healing">Accelerated Healing</option>
+    <option value="Power Blast">Power Blast</option>
+    <option value="Animal Affinity">Animal Affinity</option>
+  </select></p>
+
+  <p><button type="button" name="button" ng-click="getUserInput()" id="submitButton" class="tab">SUBMIT</button></p>
+  <!-- <button type="button" name="button" ng-click="getPets()" id="getButton">GET</button> -->
+
+</form>

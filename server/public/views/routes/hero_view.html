@@ -1,0 +1,10 @@
+<div class="outputDiv" ng-repeat="record in allHeroes">
+
+  <p>Alias: {{record.alias }}</p>
+  <p>First Name: {{record.first_name }}</p>
+  <p>Last Name: {{record.last_name}}</p>
+  <p>City: {{record.city }}</p>
+  <p>Power: {{record.power_name }}</p>
+  <button type="button" name="button" id="{{ record._id }}" class="deleteButton tab" ng-click="deleteHero()">DELETE</button>
+
+</div>
