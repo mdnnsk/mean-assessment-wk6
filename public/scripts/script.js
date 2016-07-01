@@ -1,4 +1,20 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ["ngRoute"]);
+
+myApp.config(["$routeProvider", function ($routeProvider){
+  $routeProvider.
+      when("/add_hero",{
+        templateUrl: "/ngroutes/add_hero.html",
+        controller:"controller"
+      }).
+      when("/view_hero",{
+        templateUrl: "/ngroutes/view_hero.html",
+        controller:"controller"
+      }).
+      otherwise({
+        redirectTo: "/add_hero"
+      });
+
+}]);
 
 //create controller for page
 myApp.controller('controller', ['$scope', '$http', function( $scope , $http ){
