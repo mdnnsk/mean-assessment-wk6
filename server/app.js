@@ -5,7 +5,6 @@ var bodyParser = require('body-parser');
 var heroesRoute = require('../routes/heroesRoute');
 
 
-
 var server = app.listen(4242, 'localhost', function (req, res) {
   var port = server.address().port;
   console.log('listening on ' + port);
