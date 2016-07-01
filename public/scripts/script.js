@@ -30,7 +30,7 @@ myApp.controller('controller', ['$scope', '$http', function( $scope , $http ){
   //load items on load
  refreshPage();
 
-//define power selection options
+//define power selection options - alternatively also possible to pull list from a collection, but Im using a local db so that makes no sense
 $scope.choosePower=[
   {powerId : 1, name : "Invisibility"},
   {powerId : 2, name : "Flight"},
