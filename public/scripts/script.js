@@ -1,6 +1,6 @@
 var myApp = angular.module('myApp', ["ngRoute"]);
 
-myApp.config(["$routeProvider", function ($routeProvider){
+myApp.config(["$routeProvider", function ($routeProvider){ // use ngRoute to display 2 views
   $routeProvider.
       when("/add_hero",{
         templateUrl: "/ngroutes/add_hero.html",
@@ -14,7 +14,7 @@ myApp.config(["$routeProvider", function ($routeProvider){
         redirectTo: "/add_hero"
       });
 
-}]);
+}]);//end ngrouter
 
 //create controller for page
 myApp.controller('controller', ['$scope', '$http', function( $scope , $http ){
@@ -29,6 +29,19 @@ myApp.controller('controller', ['$scope', '$http', function( $scope , $http ){
   };
   //load items on load
  refreshPage();
+
+//define power selection options
+$scope.choosePower=[
+  {powerId : 1, name : "Invisibility"},
+  {powerId : 2, name : "Flight"},
+  {powerId : 3, name : "Super Speed"},
+  {powerId : 4, name : "Heat Vision"},
+  {powerId : 5, name : "Super Strength"},
+  {powerId : 6, name : "Accelerated Healing"},
+  {powerId : 7, name : "Power Blast"},
+  {powerId : 8, name : "Animal Affinity"},
+];
+
   //collect user input from form
   $scope.getUserInput = function(){
     console.log("in getuserinput " + $scope.aliasIn + " " + $scope.firstNameIn + " " + $scope.lastNameIn + " " +  $scope.cityIn + " " +  $scope.powerNameIn);
