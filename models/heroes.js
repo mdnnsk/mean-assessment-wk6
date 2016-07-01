@@ -5,7 +5,10 @@ var heroSchema = new Schema({
   first_name: String,
   last_name: String,
   city: String,
-  power_name: String
+  power_name: {
+    type: String,
+    allowedValues: ['Invisibility', 'Flight', 'Super Speed', 'Heat Vision', 'Super Strength', 'Accelerated Healing', 'Power Blast', 'Animal Affinity']
+  }
 
 });
 

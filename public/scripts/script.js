@@ -38,4 +38,21 @@ myApp.controller('controller', ['$scope', '$http', function( $scope , $http ){
     }).then(refreshPage());
   }; //end getUserInput
 
+  $scope.deleteHero = function(){ //click delete
+    var heroId = {
+    id: event.target.id
+  };
+    $http({
+      method: 'delete',
+      url: '/heroes',
+      data: heroId,
+      headers: {'Content-Type': 'application/json;charset=utf-8'}
+    }).then( function mySuccess( response ) {
+              refreshPage();
+              console.log( response.data ) ;
+          }, function myError( response ) {
+              console.log( response.statusText ) ;
+          });
+  };// end delete hero
+
 }]); //end controller

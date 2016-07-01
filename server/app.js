@@ -63,3 +63,16 @@ app.post('/heroes', function(req,res){
     }
   });
 });
+
+app.delete('/heroes', function(req,res){
+  console.log('deleting' + req.body.alias);
+  hero.findOne({_id: req.body.id}, function (err, userResult){
+    if (err) {
+      console.log(err);
+      res.sendStatus(500);
+    }else{
+      hero.remove({_id:userResult._id}, function(err) {});
+      res.sendStatus(200);
+    }
+  });
+});
