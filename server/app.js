@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 
 app.get('/', function(req,res){
   console.log('at base url');
-  res.sendFile(path.resolve('../views/index.html'));
+  res.sendFile(path.resolve('./public/views/index.html'));
 });
 
 app.use('/heroes', heroesRoute);
